@@ -13,7 +13,7 @@ node {
       
       check = isUnix();
       
-      echo " value of $check";
+      echo " value of isUnix $check";
       
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"

@@ -11,7 +11,10 @@ node {
    stage('Build') {
       // Run the maven build
       
-     // echo isUnix()
+      check = isUnix();
+      
+      echo " value of $check";
+      
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
       } else {
